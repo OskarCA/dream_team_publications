@@ -4,7 +4,6 @@ Rails.application.configure do
   config.consider_all_requests_local = true
   config.require_master_key = true
 
-
   if Rails.root.join('tmp', 'caching-dev.txt').exist?
     config.action_controller.perform_caching = true
 
@@ -18,7 +17,7 @@ Rails.application.configure do
     config.cache_store = :null_store
   end
 
-  config.active_storage.service = :local
+  config.active_storage.service = :amazon
 
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
 
